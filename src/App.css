@@ -1,38 +1,277 @@
-.App {
-  text-align: center;
+:root {
+  --font-size-base: 16px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+html {
+  font-size: var(--font-size-base);
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: calc(var(--font-size-base) * 0.9);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (max-width: 425px) {
+  html {
+    font-size: calc(var(--font-size-base) * 0.8);
+  }
+}
+
+body {
+  background-image: url(oficina.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+.contenedor-header {
+  height: 90px;
+  display: flex;
+  background: #1e1e1e;
+  /* background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 38%, rgba(9, 9, 121, 0.3533788515406162) 100%, rgba(0, 212, 255, 1) 100%); */
+}
+
+.presentacion {
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.titulos {
+  margin-right: 5%;
+  z-index: 1;
+}
+
+.titulos h2 {
+  width: 100%;
+  z-index: 1;
+  color: #ffffff;
+}
+
+.titulos p {
+  width: 100%;
+  text-align: end;
+  z-index: 1;
+  color: #ffffff;
+}
+
+/*aca configuro como se veria en destop-pc en la parte superior*/
+/* .desplegable {
+  display: flex;
+  justify-content: end;
+} */
+
+/*aca configuro como se veria en destop-pc en la parte lateral izquierda*/
+.desplegable {
+  position: fixed;
+  top: 0;
+  width: 90px;
+  /* Ancho de la barra lateral */
+  height: 100vh;
+  /* Color de fondo de la barra lateral */
+  background: #1e1e1e;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.desplegable-table-movil{
+  display: none;
+}
+
+.logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60px;
+  /* ajusta el ancho del logo */
+  height: 60px;
+  /* ajusta el alto del logo */
+  margin: 18px 25px 15px 10px;
+  /* ajusta el margen del logo */
+  z-index: 1;
+  /* ajusta la capa del logo */
+  border-radius: 100%;
+}
+
+.barras {
+  display: none;
+  /* background: #1e1e1e; */
+  margin: 5px;
+  height: 50px;
+  z-index: 1;
+}
+
+/*aca configuro como se veria en destop-pc en la parte superior*/
+/* ul {
+  width: 100%;
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+} */
+
+/*aca configuro como se veria en destop-pc en la parte lateral izquierda*/
+ul {
+  list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-end;
+  /* Alineamos los elementos al final de la barra lateral */
 }
 
-.App-link {
-  color: #61dafb;
+/*aca configuro como se veria en destop-pc en la parte superior*/
+/* li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 5px;
+} */
+
+/*aca configuro como se veria en destop-pc en la parte lateral izquierda*/
+li {
+  margin-bottom: 20px;
+  /* Espacio entre elementos */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/*aca configuro como se veria en destop-pc en la parte superior*/
+/* i{
+  margin-right: 13px;
+  font-size: 20px;
+} */
+
+/*aca configuro como se veria en destop-pc en la parte lateral izquierda*/
+i {
+  font-size: 24px;
+  /* Tamaño de los iconos */
+  margin-right: 10px;
+  /* Espacio entre icono y texto */
+}
+
+ul li a:hover {
+  transform: scale(1.2);
+  /* background-color: #FF5722;*/
+}
+
+/*aca configrar com se mostraria en table*/
+@media (max-width: 850px) {
+  .barras {
+    /* background: #1E1E1E; */
+    display: block;
+    display: flex;
+    justify-content: flex-end;
   }
-  to {
-    transform: rotate(360deg);
+
+  .desplegable {
+    position: fixed;
+    /* Agregado para que el menú se coloque en la derecha de la pantalla */
+    right: 0;
+    /* Agregado para que el menú se coloque en la derecha de la pantalla */
+    transform: translateX(100%);
+    /* Cambiado de translate() a translateX() */
+    transition: 0.5s;
+    font-size: 2rem;
+    width: 50%;
+    /* Agregado para que el menú solo cubra el 50% de la pantalla */
+    background: rgba(30, 30, 30, 0.85);
+    backdrop-filter: blur (2px);
+  }
+
+  .desplegable-pc{
+    display: none;
+  }
+  
+  .desplegable-table-movil{
+    display: block;
+    display: flex;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button {
+    /* margin-left: auto; */
+    margin: 25px;
+    /* padding: 2% 1%; */
+    border: none;
+  }
+
+  li a {
+    padding: 20px;
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .boton_menu {
+    background-image: url('./icono_menu.png');
+    background-color: #1e1e1e;
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 20px;
+    background-size: 20px;
+    background-position: center;
+  }
+
+  /*con esta clese abro y cierro el menu*/
+  .abrir_menu {
+    transform: translateX(-0%);
+    /* Cambiado de translate() a translateX(-0%) logro que se abra desde el punto cero de la derecha hasta el ancho que desemos */
+    transition: 0.5s;
+    width: 100%;
+    /*Con el 100% cubrimos la pantalla completa y 50% la mitad y asi en adelante*/
+    background: rgba(30, 30, 30, 0.85);
+    backdrop-filter: blur (2px);
+  }
+
+  /*con esta clase cambiamos las barras por la X*/
+  .colocar_x {
+    background-image: url('./icono_x.png');
+    background-color: #1e1e1e;
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 20px;
+    background-size: 20px;
+    background-position: center;
+  }
+}
+
+@media (max-width: 500px) {
+  body{
+    background: none;
+  }
+  .desplegable {
+    width: 100%;
+    font-size: 3rem;
   }
 }

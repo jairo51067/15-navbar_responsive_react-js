@@ -1,24 +1,85 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+let vacio = "";
 
 function App() {
+  const abrir_cerrar_menu = () => {
+    let menu_desplegable = document.getElementById("menu");
+    let boton_cerrar = document.getElementById("x");
+    menu_desplegable.classList.toggle("abrir_menu");
+    boton_cerrar.classList.toggle("colocar_x");
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header className="contenedor-header">
+        <div className="presentacion">
+          <div className="imagen">
+            <img src="logobn.png" alt="Logo" className="logo" />
+          </div>
+          <div className="titulos">
+            <h2>Titulo Principal</h2>
+            <p>Titulo Secundario</p>
+          </div>
+        </div>
+
+        <div className="barras">
+          <button
+            onClick={abrir_cerrar_menu}
+            className="boton_menu"
+            id="x"
+          ></button>
+        </div>
+
+        <nav id="menu" className="desplegable">
+          <ul className="desplegable-pc">
+            <li>
+              <a href={vacio}>
+                <i className="fas fa-home"></i>
+              </a>
+            </li>
+            <li>
+              <a href={vacio}>
+                <i className="fas fa-info-circle"></i>
+              </a>
+            </li>
+            <li>
+              <a href={vacio}>
+                <i className="fas fa-cogs"></i>
+              </a>
+            </li>
+            <li>
+              <a href={vacio}>
+                <i className="fas fa-envelope"></i>
+              </a>
+            </li>
+          </ul>
+
+          <ul className="desplegable-table-movil">
+            <li>
+              <a href={vacio}>
+                <i className="fas fa-home"></i> Home
+              </a>
+            </li>
+            <li>
+              <a href={vacio}>
+                <i className="fas fa-info-circle"></i> About
+              </a>
+            </li>
+            <li>
+              <a href={vacio}>
+                <i className="fas fa-cogs"></i> Services
+              </a>
+            </li>
+            <li>
+              <a href={vacio}>
+                <i className="fas fa-envelope"></i> Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
       </header>
-    </div>
+    </>
   );
 }
 
