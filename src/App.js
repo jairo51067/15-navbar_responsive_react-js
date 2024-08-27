@@ -15,7 +15,7 @@ function App() {
       <header className="contenedor-header">
         <div className="presentacion">
           <div className="imagen">
-            <img src="logobn.png" alt="Logo" className="logo" />
+            <img src="logobn.png" alt="Logo-personal" className="logo" />
           </div>
           <div className="titulos">
             <h2>Titulo Principal</h2>
