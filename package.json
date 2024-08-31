@@ -4,14 +4,13 @@
   "homepage": "https://jairo51067.github.io/15-navbar_responsive_react-js/",
   "private": true,
   "dependencies": {
-    "@babel/core": "^7.16.0",
+    "@babel/plugin-proposal-private-property-in-object": "^7.14.5",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
-    "@svgr/webpack": "^5.5.0",
+    "@svgr/webpack": "^8.1.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "babel-jest": "^27.4.2",
-    "babel-loader": "^8.2.3",
+    "babel-jest": "^29.7.0",
     "babel-plugin-named-asset-import": "^0.3.8",
     "bfj": "^7.0.2",
     "browserslist": "^4.18.1",
@@ -44,8 +43,9 @@
     "react-dev-utils": "^12.0.1",
     "react-dom": "^18.3.1",
     "react-refresh": "^0.11.0",
+    "react-scripts": "^5.0.1",
     "resolve": "^1.20.0",
-    "resolve-url-loader": "^4.0.0",
+    "resolve-url-loader": "^5.0.0",
     "sass-loader": "^12.3.0",
     "semver": "^7.3.5",
     "source-map-loader": "^3.0.0",
@@ -56,16 +56,15 @@
     "webpack": "^5.64.4",
     "webpack-dev-server": "^4.6.0",
     "webpack-manifest-plugin": "^4.0.2",
-    "workbox-webpack-plugin": "^6.4.1",
-    "@babel/plugin-proposal-private-property-in-object": "^7.14.5"
+    "workbox-webpack-plugin": "^6.4.1"
   },
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "test": "node scripts/test.js",
-     "babel": "babel"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "babel": "babel"
   },
   "eslintConfig": {
     "extends": [
@@ -86,6 +85,10 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.25.6",
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-react": "^7.24.7",
     "babel-cli": "^6.26.0",
     "babel-env": "^2.4.1",
     "babel-preset-react-app": "^10.0.1",
@@ -142,5 +145,4 @@
     ],
     "resetMocks": true
   }
-  
 }
