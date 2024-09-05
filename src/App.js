@@ -1,5 +1,5 @@
-
-import "./App.css"; 
+import "./App.css";
+import logo from "./logobn.png";
 let vacio = "";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       <header className="contenedor-header">
         <div className="presentacion">
           <div className="imagen">
-            <img src="logobn.png" alt="Logo-personal" className="logo" />
+            <img className="logo" src={logo} alt={logo} />
           </div>
           <div className="titulos">
             <h2>Titulo Principal</h2>
