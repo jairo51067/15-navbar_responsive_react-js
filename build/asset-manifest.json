@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/15-navbar_responsive_react-js/static/css/main.71f221ae.css",
+    "main.js": "/15-navbar_responsive_react-js/static/js/main.281b4b79.js",
+    "static/js/453.d0da5d1a.chunk.js": "/15-navbar_responsive_react-js/static/js/453.d0da5d1a.chunk.js",
+    "static/media/oficina.jpg": "/15-navbar_responsive_react-js/static/media/oficina.2d38603c8a1c6d01345a.jpg",
+    "static/media/logobn.png": "/15-navbar_responsive_react-js/static/media/logobn.a133e87a6e2ca4fabb14.png",
+    "static/media/icono_menu.png": "/15-navbar_responsive_react-js/static/media/icono_menu.1b6e8dd51a03f3978838.png",
+    "static/media/icono_x.png": "/15-navbar_responsive_react-js/static/media/icono_x.8b58a55ef9c6528a6e7b.png",
+    "index.html": "/15-navbar_responsive_react-js/index.html",
+    "main.71f221ae.css.map": "/15-navbar_responsive_react-js/static/css/main.71f221ae.css.map",
+    "main.281b4b79.js.map": "/15-navbar_responsive_react-js/static/js/main.281b4b79.js.map",
+    "453.d0da5d1a.chunk.js.map": "/15-navbar_responsive_react-js/static/js/453.d0da5d1a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.71f221ae.css",
+    "static/js/main.281b4b79.js"
+  ]
+}
